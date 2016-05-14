@@ -42,4 +42,14 @@ public class TestRomanToArabic {
 		assertTrue(400 == number.RomanToArabic("CD"));
 		assertTrue(900 == number.RomanToArabic("CM"));		
 	}
+	
+	@Test
+	public void TestRoman_MoreComplicated_toArabic() {
+		assertTrue(38 == number.RomanToArabic("XXXVIII"));
+		assertTrue(68 == number.RomanToArabic("LXVIII"));
+		assertTrue(88 == number.RomanToArabic("LXXXVIII"));
+		assertTrue(98 == number.RomanToArabic("XCVIII"));
+		assertTrue(890 == number.RomanToArabic("DCCCXC"));
+		assertTrue(1800 == number.RomanToArabic("MDCCC"));			
+	}
 }

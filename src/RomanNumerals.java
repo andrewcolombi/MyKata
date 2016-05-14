@@ -117,14 +117,17 @@ public class RomanNumerals {
 				if (ThisDigit < NextDigit) {
 					sum += NextDigit - ThisDigit;
 					position ++;
+					if (position + 1 < length) {
+						ThisDigit = SingleCharToArabic(number.charAt(position));
+					}
 				}
 				else {
 					sum += ThisDigit;
 					if (position + 1 == length) {
 						sum += NextDigit;
 					}
-				}
-				ThisDigit = NextDigit;
+					ThisDigit = NextDigit;
+				}				
 			}
 			return sum ;
 		}

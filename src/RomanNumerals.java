@@ -101,11 +101,43 @@ public class RomanNumerals {
 	}
 
 	public Integer RomanToArabic (String number) {
-		if (number.length() == 0) {
+		int length = number.length();
+		if (length == 0) {
 			return null;
 		}
 		else {
+			int sum = 0;
+			for (int position = 0; position < length; position ++) {
+				sum += SingleCharToArabic(number.charAt(position));
+			}
+			return sum;
+		}
+	}
+	
+	private Integer SingleCharToArabic(char number) {
+		if (number == ('I')) {
 			return 1;
+		}
+		else if (number == ('V')) {
+			return 5;
+		}
+		else if (number == ('X')) {
+			return 10;
+		}
+		else if (number == ('L')) {
+			return 50;
+		}
+		else if (number == ('C')) {
+			return 100;
+		}
+		else if (number == ('D')) {
+			return 500;
+		}
+		else if (number ==('M')) {
+			return 1000;
+		}
+		else {
+			return 0;
 		}
 	}
 }

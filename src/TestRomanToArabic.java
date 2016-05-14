@@ -15,5 +15,11 @@ public class TestRomanToArabic {
 	public void TestRoman_I_toArabic() {
 		assertTrue(1 == number.RomanToArabic("I"));
 	}
+	
+	@Test
+	public void TestRoman_II_III_toArabic() {
+		assertTrue(2 == number.RomanToArabic("II"));
+		assertTrue(3 == number.RomanToArabic("III"));
+	}
 
 }

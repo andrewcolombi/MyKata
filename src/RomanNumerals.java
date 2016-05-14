@@ -36,8 +36,19 @@ public class RomanNumerals {
 					return "V" + ArabicToRoman(number - 5);		
 				}
 			}
-			else if (number == 50) {
-				return "L";
+			else if (number <= 50) {
+				if (number == 50) {
+					return "L";
+				}				
+				else if (number == 40) {
+					return "XL";
+				}
+				else if (number > 40 ) {
+					return "XL" + ArabicToRoman(number - 40);
+				}
+				else {
+					return "X" + ArabicToRoman(number - 10);		
+				}
 			}
 			else if (number == 100) {
 				return "C";

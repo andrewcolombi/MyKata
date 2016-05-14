@@ -22,8 +22,7 @@ public class Test {
 	public void WhenPassed4ItReturnsTheRomanNumeral() {		
 		assertEquals("IV", number.ArabicToRoman(4));
 	}
-	
-	
+		
 	@org.junit.Test
 	public void WhenPassed_10_ItReturnsTheRomanNumeral() {		
 		assertEquals("X", number.ArabicToRoman(10));
@@ -47,6 +46,14 @@ public class Test {
 	@org.junit.Test
 	public void WhenPassed_1000_ItReturnsTheRomanNumeral() {		
 		assertEquals("M", number.ArabicToRoman(1000));
+	}
+	
+	@org.junit.Test
+	public void WhenPassed_6to9_ItReturnsTheRomanNumeral() {		
+		assertEquals("VI", number.ArabicToRoman(6));
+		assertEquals("VII", number.ArabicToRoman(7));
+		assertEquals("VIII", number.ArabicToRoman(8));
+		assertEquals("IX", number.ArabicToRoman(9));
 	}
 	
 	@org.junit.Test

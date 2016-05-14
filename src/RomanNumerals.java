@@ -11,25 +11,30 @@
 public class RomanNumerals {
 	public String ArabicToRoman (int number) {
 		if (number >= 1) {
-			if (number < 5) {
-				if (number == 1) {
-					return "I";
-				}
-				else if (number == 2) {
-					return "II";
-				}
-				else if (number == 3) {
-					return "III";
-				}
-				else if (number == 4) {
+			if (number == 1) {
+				return "I";
+			}
+			else if (number <= 5) {
+				if (number == 4) {
 					return "IV";
 				}
+				else if (number == 5) {
+					return "V";
+				}
+				else {
+					return "I" + ArabicToRoman(number - 1);
+				}
 			}
-			else if (number == 5) {
-				return "V";
-			}
-			else if (number == 10) {
-				return "X";
+			else if (number <= 10) {
+				if (number == 9) {
+					return "IX";
+				}				
+				else if (number == 10) {
+					return "X";
+				}
+				else {
+					return "V" + ArabicToRoman(number - 5);		
+				}
 			}
 			else if (number == 50) {
 				return "L";

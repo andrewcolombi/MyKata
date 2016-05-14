@@ -100,7 +100,7 @@ public class RomanNumerals {
 		}		
 	}
 
-	public Integer RomantoArabic (String number) {
-		return null;
+	public Integer RomanToArabic (String number) {
+		return 1;
 	}
 }

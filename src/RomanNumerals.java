@@ -105,12 +105,28 @@ public class RomanNumerals {
 		if (length == 0) {
 			return null;
 		}
-		else {
+		else if (length == 1) {
+			return SingleCharToArabic(number.charAt(0));
+		}
+		else {			 
 			int sum = 0;
-			for (int position = 0; position < length; position ++) {
-				sum += SingleCharToArabic(number.charAt(position));
+			int ThisDigit = SingleCharToArabic(number.charAt(0));
+						
+			for (int position = 1; position < length; position ++) {
+				int NextDigit = SingleCharToArabic(number.charAt(position));
+				if (ThisDigit < NextDigit) {
+					sum += NextDigit - ThisDigit;
+					position ++;
+				}
+				else {
+					sum += ThisDigit;
+					if (position + 1 == length) {
+						sum += NextDigit;
+					}
+				}
+				ThisDigit = NextDigit;
 			}
-			return sum;
+			return sum ;
 		}
 	}
 	

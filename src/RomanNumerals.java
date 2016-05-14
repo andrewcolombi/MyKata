@@ -10,11 +10,15 @@
 
 public class RomanNumerals {
 	public String ArabicToRoman (int number) {
-		return "I";
+		if (number >= 1) {
+			return "I";
+		}			
+		else {
+			return "Invalid Input!";
+		}		
 	}
 
 	public Integer RomantoArabic (String number) {
 		return null;
 	}
-
 }

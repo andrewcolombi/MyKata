@@ -64,8 +64,19 @@ public class RomanNumerals {
 					return "L" + ArabicToRoman(number - 50);		
 				}				
 			}
-			else if (number == 500) {
-				return "D";
+			else if (number <= 500) {
+				if (number == 500) {
+					return "D";
+				}				
+				else if (number == 400) {
+					return "CD";
+				}
+				else if (number > 400 ) {
+					return "CD" + ArabicToRoman(number - 400);
+				}
+				else {
+					return "C" + ArabicToRoman(number - 100);		
+				}		
 			}
 			else if (number == 1000) {
 				return "M";

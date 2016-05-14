@@ -81,6 +81,17 @@ public class Test {
 	}
 	
 	@org.junit.Test
+	public void WhenPassed_101to499_ItReturnsTheRomanNumeral() {		
+		assertEquals("CI", number.ArabicToRoman(101));
+		assertEquals("CLV", number.ArabicToRoman(155));
+		assertEquals("CCLXIX", number.ArabicToRoman(269));
+		assertEquals("CCCLXXIX", number.ArabicToRoman(379));		
+		assertEquals("CDLXXXIII", number.ArabicToRoman(483));
+		assertEquals("CD", number.ArabicToRoman(400));
+		assertEquals("CDXCIX", number.ArabicToRoman(499));
+	}
+	
+	@org.junit.Test
 	public void TestCaseForInputLessThan1() {
 		assertEquals("Invalid Input!", number.ArabicToRoman(-1));
 	}

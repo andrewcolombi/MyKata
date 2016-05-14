@@ -9,6 +9,16 @@ public class Test {
 	}
 
 	@org.junit.Test
+	public void WhenPassed2ItReturnsTheRomanNumeral() {		
+		assertEquals("II", number.ArabicToRoman(2));
+	}
+	
+	@org.junit.Test
+	public void WhenPassed3ItReturnsTheRomanNumeral() {		
+		assertEquals("II", number.ArabicToRoman(3));
+	}
+	
+	@org.junit.Test
 	public void TestCaseForInputLessThan1() {
 		assertEquals("Invalid Input!", number.ArabicToRoman(-1));
 	}

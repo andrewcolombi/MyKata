@@ -50,8 +50,19 @@ public class RomanNumerals {
 					return "X" + ArabicToRoman(number - 10);		
 				}
 			}
-			else if (number == 100) {
-				return "C";
+			else if (number <= 100) {
+				if (number == 100) {
+					return "C";
+				}				
+				else if (number == 90) {
+					return "XC";
+				}
+				else if (number > 90 ) {
+					return "XC" + ArabicToRoman(number - 90);
+				}
+				else {
+					return "L" + ArabicToRoman(number - 50);		
+				}				
 			}
 			else if (number == 500) {
 				return "D";

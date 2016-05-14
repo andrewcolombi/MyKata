@@ -78,8 +78,19 @@ public class RomanNumerals {
 					return "C" + ArabicToRoman(number - 100);		
 				}		
 			}
-			else if (number == 1000) {
-				return "M";
+			else if (number <= 1000) {
+				if (number == 1000) {
+					return "M";
+				}				
+				else if (number == 900) {
+					return "CM";
+				}
+				else if (number > 900 ) {
+					return "CM" + ArabicToRoman(number - 900);
+				}
+				else {
+					return "D" + ArabicToRoman(number - 500);		
+				}
 			}
 			
 			return "Error";

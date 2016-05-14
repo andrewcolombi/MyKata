@@ -103,7 +103,18 @@ public class Test {
 	}
 	
 	@org.junit.Test
+	public void WhenPassed_over1000_ItReturnsTheRomanNumeral() {		
+		assertEquals("MI", number.ArabicToRoman(1001));
+		assertEquals("MDCLV", number.ArabicToRoman(1655));
+		assertEquals("MMDCCLXVIII", number.ArabicToRoman(2768));
+		assertEquals("MMMDCCCLXXIX", number.ArabicToRoman(3879));		
+		assertEquals("MMMMCMLXXXIII", number.ArabicToRoman(4983));
+		assertEquals("MMMMMCM", number.ArabicToRoman(5900));
+		assertEquals("MMMMMMCMXCIX", number.ArabicToRoman(6999));
+	}
+	
+	@org.junit.Test
 	public void TestCaseForInputLessThan1() {
-		assertEquals("Invalid Input!", number.ArabicToRoman(-1));
+		assertEquals("Invalid Input! Numbers must be greater than 0.", number.ArabicToRoman(-1));
 	}
 }

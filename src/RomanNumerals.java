@@ -91,12 +91,12 @@ public class RomanNumerals {
 				else {
 					return "D" + ArabicToRoman(number - 500);		
 				}
-			}
+			}			
 			
-			return "Error";
+			return "M" + ArabicToRoman(number - 1000);	
 		}			
 		else {
-			return "Invalid Input!";
+			return "Invalid Input! Numbers must be greater than 0.";
 		}		
 	}
 

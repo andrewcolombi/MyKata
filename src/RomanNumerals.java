@@ -101,6 +101,11 @@ public class RomanNumerals {
 	}
 
 	public Integer RomanToArabic (String number) {
-		return 1;
+		if (number.length() == 0) {
+			return null;
+		}
+		else {
+			return 1;
+		}
 	}
 }
